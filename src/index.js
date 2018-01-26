@@ -1,30 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './styles/styles.scss';
+import AppRouter from './routers/AppRouter';
 
-const expenseDashboard = () => <div>This is from my dashboard component</div>;
-
-const addExpense = () => <div>This is from my add expense component</div>;
-
-const editExpense = () => <div>This is from my edit expense component</div>;
-
-const helpPage = () => <div>This is from my help page component</div>;
-
-const notFoundPage = () => <div>404!</div>;
-
-const routes = (
-  <BrowserRouter>
-    <div>
-      <Switch>
-        <Route exact path="/" component={expenseDashboard} />
-        <Route path="/create" component={addExpense} />
-        <Route path="/edit" component={editExpense} />
-        <Route path="/help" component={helpPage} />
-        <Route component={notFoundPage} />
-      </Switch>
-    </div>
-  </BrowserRouter>
-);
-
-ReactDOM.render(routes, document.querySelector('#root'));
+ReactDOM.render(<AppRouter />, document.querySelector('#root'));
