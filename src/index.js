@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
+import './styles/styles.scss';
 
-ReactDOM.render(<p>This is my boilerplate</p>, document.getElementById('root'));
-registerServiceWorker();
+ReactDOM.render(<p>This is my test</p>, document.querySelector('#root'));
